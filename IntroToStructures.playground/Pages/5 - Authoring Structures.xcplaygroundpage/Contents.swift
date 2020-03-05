@@ -81,9 +81,18 @@ struct Triangle {
         return sideA + base + sideC
     }
     
-    
+    var triangleDescription: String {
+        return "The area of this triangle is " + String(format: "%.1f", area) + " square units and the perimeter of this triangle is " + String(format: "%.1f", perimeter) + " units"}
 }
 
+// Create a triangle instance
+var someTriangle = Triangle(base: 2, height: 3, sideA: 1, sideC: 4)
+
+// What is the area of the triangle?
+someTriangle.area
+
+// Report on the area?
+print(someTriangle.triangleDescription)
 
 /*:
  [Previous: Area Example - Rectangle](@previous) | Page 4
