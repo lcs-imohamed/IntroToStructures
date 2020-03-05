@@ -94,6 +94,37 @@ someTriangle.area
 // Report on the area?
 print(someTriangle.triangleDescription)
 
+
+struct Sphere {
+    // MARK: Properties
+    var radius: Double
+    
+    //Computed property to return surface area
+    var surfaceArea: Double {
+        return 4 * Double.pi * pow(radius, 2.0)
+    }
+    
+    //Computed property to return volume
+    var volume: Double {
+        return 4/3 * Double.pi * pow(radius, 3.0)
+    }
+    
+    //Computed property to return description of the shape
+    var sphereDescription: String {
+        return "The surface area of this sphere is " + String(format: "%.1f", surfaceArea) + " square units and the volume of this sphere is " + String(format: "%.1f", volume) + " units cubed."
+    }
+}
+
+// Create a sphere instance
+var someSphere = Sphere(radius: 5)
+
+//What is the surface area of the sphere
+someSphere.surfaceArea
+
+//Report on the shape?
+print(someSphere.sphereDescription)
+
+
 /*:
  [Previous: Area Example - Rectangle](@previous) | Page 4
  */
